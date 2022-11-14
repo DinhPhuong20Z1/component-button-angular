@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -96,12 +97,47 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
           }
         }
       }
+    },
+    "component-button": {
+      "projectType": "library",
+      "root": "projects/component-button",
+      "sourceRoot": "projects/component-button/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/component-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/component-button/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/component-button/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/component-button/src/test.ts",
+            "tsConfig": "projects/component-button/tsconfig.spec.json",
+            "karmaConfig": "projects/component-button/karma.conf.js"
+          }
+        }
+      }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

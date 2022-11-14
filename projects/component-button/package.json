@@ -1,0 +1,15 @@
+{
+  "name": "component-button-phuongdd",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^14.2.0",
+    "@angular/core": "^14.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "description": "hello new file",
+  "license": "MIT",
+  "private": false,
+  "main": "index.js"
+}
